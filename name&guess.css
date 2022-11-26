@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+.main_container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    margin-top: 5%;
+    border: 2px solid black;
+    width: 60%;
+    background-color: lemonchiffon;
+}
+
+.right_side{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 1px solid black;
+    width: 15rem;
+    height: 30rem;
+    margin: 2rem;
+    background-color: burlywood;
+    font-size: 100%;
+}
+
+.previous{
+    padding: 1rem;
+    font-size: large;
+}
+
+h3{
+    padding: 1rem;
+}
+
+
+.title{
+    border: 1px ;
+    width: 50%;
+    padding: 1rem;
+    font-size: 200%;
+    position: relative;
+    left: 40%; 
+    
+}
+
+label{
+    padding: 1rem;
+    font-size: 150%;
+}
+
+#name{
+    font-size: 110%;
+}
+
+button{
+    font-size: 120%;
+    padding: 1rem;
+    margin: 1rem;
+    position: relative;
+    left: 40%;
+}
+
+button:hover{
+    background-color: white;
+}
+
+.gender_container, .age_container, .country_container{
+    display: flex;
+    flex-direction: row;
+    margin: 2rem;
+    flex-wrap: wrap;
+    
+}
+
+.countryANDflag{
+display: grid;
+grid-template-columns: 5rem 5rem 5rem 5rem 5rem;
+}
+
+ .gender, .age, .country, .country1, .country2, .country3, .country4{
+    margin-left: 1rem;
+    border: 1px solid black;
+    min-width: 7rem;
+    min-height: 5rem;
+    background-image: url(OIP.jpeg) ;
+    text-align: center;
+    font-size: large;
+ }
+
+ .country, .country1, .country2, .country3, .country4{
+    min-width: 3rem;
+    min-height: 2rem;
+    margin-bottom: 0.5rem;
+ }
+
+ .countryANDflag {
+    border: 1px solid black;
+    height: 5rem;
+    background-image: url(OIP.jpeg) ;
+    
+ }
