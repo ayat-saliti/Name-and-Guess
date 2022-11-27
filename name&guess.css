@@ -1,18 +1,16 @@
 *{
     margin: 0;
     padding: 0;
-    
 }
 
 
 .main_container{
-    position: relative;
     display: flex;
     flex-direction: row;
     margin-left: 10%;
     margin-top: 5%;
     border: 2px solid black;
-    width: 60%;
+    width: 80%;
     background-color: lemonchiffon;
 }
 
@@ -26,6 +24,7 @@
     margin: 2rem;
     background-color: burlywood;
     font-size: 100%;
+   
 }
 
 .previous{
@@ -35,12 +34,13 @@
 
 h3{
     padding: 1rem;
+    font-size: 150%;
 }
 
 
 .title{
     border: 1px ;
-    width: 50%;
+    min-width: 50%;
     padding: 1rem;
     font-size: 200%;
     position: relative;
@@ -48,19 +48,29 @@ h3{
     
 }
 
+.input_name{
+    display: flex;
+    flex-direction: row;
+    min-width: 50vw;
+    padding: 2rem;
+}
+
 label{
-    padding: 1rem;
+    margin-right: 1rem;
     font-size: 150%;
 }
 
 #name{
     font-size: 110%;
+    width: 7rem;
+    height: 2rem;
+    text-align:center;
 }
 
 button{
     font-size: 120%;
     padding: 1rem;
-    margin: 1rem;
+    margin-bottom: 1rem;
     position: relative;
     left: 40%;
 }
@@ -69,38 +79,40 @@ button:hover{
     background-color: white;
 }
 
-.gender_container, .age_container, .country_container{
+.gender_container, .age_container, h2{
     display: flex;
     flex-direction: row;
-    margin: 2rem;
-    flex-wrap: wrap;
-    
+    padding: 0.5rem 1rem;
 }
 
-.countryANDflag{
-display: grid;
-grid-template-columns: 5rem 5rem 5rem 5rem 5rem;
+hr{
+    margin: 1.5rem;
 }
 
- .gender, .age, .country, .country1, .country2, .country3, .country4{
-    margin-left: 1rem;
+ .gender, .age{
     border: 1px solid black;
-    min-width: 7rem;
-    min-height: 5rem;
+    min-width: 6rem;
+    max-height: 2rem;
     background-image: url(OIP.jpeg) ;
     text-align: center;
-    font-size: large;
+    font-size: 1.4rem;
  }
 
- .country, .country1, .country2, .country3, .country4{
-    min-width: 3rem;
-    min-height: 2rem;
-    margin-bottom: 0.5rem;
- }
 
+ .country_flags{
+    display: flex;
+    flex-direction: row;
+ }
  .countryANDflag {
     border: 1px solid black;
-    height: 5rem;
+    height: 3rem;
     background-image: url(OIP.jpeg) ;
-    
+    width: 4rem;
+    text-align: center;
+    margin-left: 2rem;
+    list-style-type: none;   
  }
+
+
+
+ 
