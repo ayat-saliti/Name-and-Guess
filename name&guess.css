@@ -103,16 +103,28 @@ hr{
     display: flex;
     flex-direction: row;
  }
- .countryANDflag {
+ .countryCSS {
     border: 1px solid black;
-    height: 3rem;
+    height: 2rem;
     background-image: url(OIP.jpeg) ;
     width: 4rem;
     text-align: center;
     margin-left: 2rem;
-    list-style-type: none;   
+    list-style-type: none; 
+    margin-bottom: 1rem;
+
  }
 
+ li{
+    padding: 0.5rem;
+ }
 
+ .flag_container{
+    width: 4rem;
+    height: 3rem;
+    list-style-type: none;   
+    margin-left: 1rem;
+    margin-bottom: 1.15rem;
+    padding: 0;
+ }
 
- 

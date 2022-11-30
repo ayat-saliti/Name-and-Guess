@@ -2,6 +2,7 @@
 let genderContainer = document.querySelector(".gender");
 let ageContainer = document.querySelector(".age");
 let countryContainer = document.body.querySelector('.country_container');
+let flagContainer = document.body.querySelector('.flag_container');
 let guessButton = document.querySelector('button');
 loadName();
 
@@ -52,48 +53,49 @@ guessButton.addEventListener('click', (event) => {
             document.body.querySelector('.country_container').appendChild(ul);
             for (let i = 0; i < myArray.length; i++) {
                 let li = document.createElement("li");
-                li.className = "countryANDflag";
+                li.className = "countryCSS";
                 li.innerHTML = gettenCountry.country[i].country_id;
                 ul.appendChild(li);
+                let x = li.innerHTML;
+                await getFlag(x);
             }
 
-            await getFlag(gettenCountry);
+            
         }
     }
 
-    async function getFlag() {
+    async function getFlag(x) {
         if (name.includes(" ")) {
             return;
         }
         else {
             let url = 'https://restcountries.com/v3.1/alpha?codes=';
 
-            let response = await fetch(url);
+            let response = await fetch(url+x);
             let gettenFlag = await response.json();
-
-            let myArray = gettenFlag.flag;
-
+            let myArray = gettenFlag.flags;
             let ul = document.createElement("ul");
-            document.body.querySelector('.country_container').appendChild(ul);
-            for (let i = 0; i < myArray.length; i++) {
+            console.log(gettenFlag)
+            document.body.querySelector('.flag_container').appendChild(ul);
                 let img = document.createElement('img');
-                img.src = gettenFlag.flags.svg;
+                img.className = "flag_container"
+                img.src = gettenFlag[0].flags.png;
+                
                 let li = document.createElement("li");
-                li.className = "countryANDflag";
-                li.innerHTML = img.src;
+                li.className = "flag_container";
+                li.append(img);
                 ul.appendChild(li);
-            }
+           
                 }
     }
 
 
     let allPromisses = Promise.all([getAge(), getGender(), getcountry()])
-    allPromisses.then(() => getFlag())
 });
 
 
 function saveName(value) {
-    localStorage.setItem('name', value);
+  localStorage.setItem('name', value);
 }
 
 function loadName() {
@@ -112,5 +114,6 @@ function clearContent() {
     genderContainer.innerHTML = " ";
     ageContainer.innerHTML = " ";
     countryContainer.innerHTML = " ";
+    flagContainer.innerHTML = " ";
 }
 
